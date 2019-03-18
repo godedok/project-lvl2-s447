@@ -1,0 +1,28 @@
+{
+    "name": "godedok/gendiff",
+    "bin": ["bin/gendiff"],
+    "description": "gendiff in configuration files",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "k.kuzmin",
+            "email": "gdededok@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "scripts": {
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf",
+        "phpunit": "phpunit",
+        "test": "phpunit tests"
+    },
+    "autoload": {
+        "psr-4": {
+            "Godedok\\": "src",
+            "Godedok\\Tests": "tests"
+        }
+    },
+    "require": {},
+    "require-dev": {}
+}
