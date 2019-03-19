@@ -3,8 +3,8 @@ language: php
 php:
   - '7.2'
 
-install: make install
-
-script:
+install: 
   - composer self-update 
-  - make lint
+  - make install
+
+script: make lint
