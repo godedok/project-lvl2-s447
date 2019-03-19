@@ -4,7 +4,6 @@ php:
   - '7.2'
 
 install: 
-  - composer self-update 
-  - make install
+  - composer require "squizlabs/php_codesniffer=*"
 
 script: make lint
