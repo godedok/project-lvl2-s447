@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "824071186b04ad3d0755301bdd9516e8",
@@ -98,7 +98,7 @@
                 }
             ],
             "description": "A PHP library with commonly used code blocks",
-            "time": "2018-12-19T01:53:34+00:00"
+            "time": "2018-12-19 01:53:34"
         }
     ],
     "packages-dev": [
@@ -1432,12 +1432,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "04463b62d61b8bfbf880ca3e745fa9f79ca140e2"
+                "reference": "e3467d77d00955a0c55f75740c35db8185a6cf74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/04463b62d61b8bfbf880ca3e745fa9f79ca140e2",
-                "reference": "04463b62d61b8bfbf880ca3e745fa9f79ca140e2",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/e3467d77d00955a0c55f75740c35db8185a6cf74",
+                "reference": "e3467d77d00955a0c55f75740c35db8185a6cf74",
                 "shasum": ""
             },
             "require": {
@@ -1475,7 +1475,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-03-18T03:01:32+00:00"
+            "time": "2019-03-19T23:22:13+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
