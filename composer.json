@@ -23,7 +23,7 @@
             "Godedok\\Tests\\": "tests"
         },
         "files": [
-            "src/test.php",
+            "src/Cli.php",
             "src/Differ.php"
         ]
     },
