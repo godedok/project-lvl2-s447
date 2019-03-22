@@ -9,7 +9,7 @@ function genDiff($data1, $data2)
         foreach ($diff as $key => $value) {
             $result .= '  ' . $key . ': ' . json_encode($value) . PHP_EOL;
         }
-        $result .= '}' . PHP_EOL;
+        $result .= '}';
     return $result;
 }
 
