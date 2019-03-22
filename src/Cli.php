@@ -2,6 +2,8 @@
 
 namespace Godedok;
 
+use function Godedok\getData;
+
 function run()
 {
     $doc = <<<DOC
@@ -17,5 +19,9 @@ Options:
 
 DOC;
 
-    \Docopt::handle($doc);
+    $args = \Docopt::handle($doc);
+    $firstFile = getData($args['<firstFile>']);
+    $secondFile = getData($args['<secondFile>']);
+    $diff = genDiff($firstFile, $secondFile);
+    print_r($diff);
 }
