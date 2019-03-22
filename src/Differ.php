@@ -6,10 +6,10 @@ function genDiff($data1, $data2)
 {
     $diff = calcDiff($data1, $data2);
     $result = '{' . PHP_EOL;
-        foreach ($diff as $key => $value) {
-            $result .= '  ' . $key . ': ' . json_encode($value) . PHP_EOL;
-        }
-        $result .= '}';
+    foreach ($diff as $key => $value) {
+        $result .= '  ' . $key . ': ' . json_encode($value) . PHP_EOL;
+    }
+    $result .= '}';
     return $result;
 }
 
