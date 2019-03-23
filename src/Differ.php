@@ -27,7 +27,7 @@ function calcDiff(array $data1, array $data2): array
                 $carry["+ " . $key] = $data2[$key];
             }
         } elseif (array_key_exists($key, $data1)) {
-            $carry["- " . $key] = $data1[$key]; 
+            $carry["- " . $key] = $data1[$key];
         } else {
             $carry["+ " . $key] = $data2[$key];
         }
