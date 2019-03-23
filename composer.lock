@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4194805f2ebb40249e99e9591bb8329",
+    "content-hash": "8fd33806f34ac43c3ff2d713484e1fc1",
     "packages": [
         {
             "name": "docopt/docopt",
@@ -1688,9 +1688,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "symfony/yaml": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
