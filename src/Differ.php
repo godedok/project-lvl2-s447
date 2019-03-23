@@ -2,8 +2,10 @@
 
 namespace Godedok;
 
-function genDiff($data1, $data2)
+function genDiff($filePath1, $filePath2): string
 {
+    $data1 = getData($filePath1);
+    $data2 = getData($filePath2);
     $diff = calcDiff($data1, $data2);
     $result = '{' . PHP_EOL;
     foreach ($diff as $key => $value) {
