@@ -2,8 +2,6 @@
 
 namespace Godedok;
 
-use function Godedok\getData;
-
 function run()
 {
     $doc = <<<DOC
