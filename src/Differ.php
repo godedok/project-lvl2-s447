@@ -2,6 +2,8 @@
 
 namespace Godedok;
 
+use Symfony\Component\Yaml\Yaml;
+
 function genDiff($filePath1, $filePath2): string
 {
     $data1 = getData($filePath1);
@@ -38,5 +40,12 @@ function calcDiff(array $data1, array $data2): array
 function getData(string $pathToFile): array
 {
     $content = file_get_contents($pathToFile);
-    return json_decode($content, true);
+    $fileExtension = pathinfo($pathToFile, PATHINFO_EXTENSION);
+    switch ($fileExtension) {
+        case 'json':
+            return json_decode($content, true);
+        case 'yaml':
+        case 'yml':
+            return Yaml::parse($content);
+    }
 }

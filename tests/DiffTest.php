@@ -25,6 +25,11 @@ class DifferTest extends TestCase
                 'tests/data/before.json',
                 'tests/data/after.json'
             ],
+            [
+                $expected,
+                'tests/data/before.yaml',
+                'tests/data/after.yaml'
+            ],
         ];
     }
 }
