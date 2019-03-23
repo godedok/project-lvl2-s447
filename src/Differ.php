@@ -41,7 +41,6 @@ function calcDiff(array $data1, array $data2): array
             $result['+ ' . $key] = $value;
         }
     }
-    var_dump($data1, $data2, $result);
     return $result;
 }
 
