@@ -17,24 +17,31 @@ function genDiff($filePath1, $filePath2): string
 
 function calcDiff(array $data1, array $data2): array
 {
-    $result = [];
-    foreach ($data1 as $key => $value) {
-        if (array_key_exists($key, $data2)) {
-            if ($value === $data2[$key]) {
-                $result['  ' . $key] = $value;
+    $keysData = array_unique(array_merge(array_keys($data1), array_keys($data2)));
+    $result = array_reduce($keysData, function ($carry, $key) use ($data1, $data2) {
+        if(array_key_exists($key, $data1) && array_key_exists($key, $data2)) {
+            if($data1[$key] == $data2[$key]) {
+                $carry["  " . $key] = $data1[$key];
             } else {
-                $result['- ' . $key] = $data1[$key];
-                $result['+ ' . $key] = $data2[$key];
+                $carry["- " . $key] = $data1[$key];
+                $carry["+ " . $key] = $data2[$key];
             }
+        } elseif(array_key_exists($key, $data1)) {
+            $carry["- " . $key] = $data1[$key];
+            
         } else {
-            $result['- ' . $key] = $value;
+            $carry["+ " . $key] = $data2[$key];
+            
         }
-    }
+        return $carry;
+    });
+
     foreach ($data2 as $key => $value) {
         if (!array_key_exists($key, $data1)) {
             $result['+ ' . $key] = $value;
         }
     }
+    var_dump($data1, $data2, $result);
     return $result;
 }
 
