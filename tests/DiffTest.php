@@ -10,9 +10,9 @@ class DifferTest extends TestCase
     /**
      * @dataProvider additionProvider
      */
-    public function testGenDiff($expected, $beforeData, $afterData)
+    public function testGenDiff($expected, $beforeDataPath, $afterDataPath)
     {
-        $this->assertEquals($expected, genDiff($beforeData, $afterData));
+        $this->assertEquals($expected, genDiff($beforeDataPath, $afterDataPath));
     }
 
     public function additionProvider()
