@@ -20,8 +20,8 @@ Options:
 DOC;
 
     $args = \Docopt::handle($doc);
-    $firstFile = getData($args['<firstFile>']);
-    $secondFile = getData($args['<secondFile>']);
-    $diff = genDiff($firstFile, $secondFile);
+    $pathToFirstFile = getData($args['<firstFile>']);
+    $pathToSecondFile = getData($args['<secondFile>']);
+    $diff = genDiff($pathToFirstFile, $pathToSecondFile);
     print_r($diff);
 }
